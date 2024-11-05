@@ -25,15 +25,8 @@ $all_programs = $conn->query("SELECT * FROM program_pelatihan")->fetchAll();
     <title>Dashboard Peserta</title>
     <link rel="stylesheet" href="../css/style.css">
 </head>
-<body> 
-<nav class="top-menu">
-        <ul>
-            <li><a href="dashboard.php">Dashboard</a></li>
-            <li><a href="pilih_program.php">Pilih Program Pelatihan</a></li>
-            <li><a href="profile.php">Profile</a></li>
-            <li><a href="../logout.php">Logout</a></li>
-        </ul>
-    </nav>
+<body>
+    <?php include '../component/navbar.php'; ?>
 
     <div class="container">
         <h2>Program Pelatihan Saya</h2>

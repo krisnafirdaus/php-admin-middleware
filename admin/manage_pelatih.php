@@ -56,7 +56,7 @@ $pelatih = $pdo->query("SELECT * FROM pelatih ORDER BY nama_pelatih")->fetchAll(
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-    <?php include 'admin_nav.php'; ?>
+    <?php include '../component/admin_nav.php'; ?>
 
     <div class="container">
         <h2>Kelola Data Pelatih</h2>

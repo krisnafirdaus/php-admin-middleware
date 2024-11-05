@@ -9,6 +9,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $stmt->execute([$username]);
     $user = $stmt->fetch();
 
+    //  exmaple data users
+    // [
+    //     {
+    //         id: 1,
+    //         username: 'admin',
+    //         password: 'admin',
+    //         role: 'admin'
+    //     }
+    // ]
+
     if ($user && password_verify($password, $user['password'])) {
         $_SESSION['user_id'] = $user['id'];
         $_SESSION['user_role'] = $user['role'];
